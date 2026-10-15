@@ -1,7 +1,7 @@
 "use strict";
 /*
  * Laboration 5 - Studentkortsgenerator
- * Namn: DITT NAMN
+ * Namn: Sandra Safari
  */
 
 // Hämta element från DOM
@@ -116,15 +116,22 @@ function deleteHistory() {
 // Eventlyssnare
 
 // När formuläret skickas:
-// - validera inmatningen
-// - skapa studentkort om valideringen lyckas
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Formuläret skickades");
+});
 
 
 // När användaren klickar på "Rensa"
+clearButton.addEventListener("click", function () {
+    console.log("Rensa klickandes");
+});
 
 
 // När användaren klickar på "Radera historik"
-
+deleteHistoryButton.addEventListener("click", function () {
+    console.log("Radera historik klickades");
+});
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
