@@ -56,8 +56,14 @@ function displayErrors() {
  */
 function createStudentCard() {
     // Hämta information från formuläret
+    const fullname = fullnameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
 
     // Uppdatera studentkortet
+    previewFullname.textContent = fullname;
+    previewEmail.textContent = email;
+    previewPhone.textContent = phone;
 
     // Lägg till studentkortet i historiken
 
@@ -118,7 +124,7 @@ function deleteHistory() {
 // När formuläret skickas:
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log("Formuläret skickades");
+    createStudentCard();
 });
 
 
