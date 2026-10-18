@@ -123,8 +123,14 @@ function saveHistory() {
  */
 function loadHistory() {
     // Hämta eventuell sparad historik
+    const savedHistory = localStorage.getItem("studentHistory");
 
     // Uppdatera history
+    if (savedHistory) {
+        history = JSON.parse(savedHistory);
+    }
+
+    renderHistory();
 }
 
 
@@ -205,3 +211,4 @@ deleteHistoryButton.addEventListener("click", function () {
 
 // När sidan laddas:
 // - läs in och visa eventuell tidigare historik
+loadHistory();
