@@ -55,10 +55,10 @@ function validateForm() {
     if (errors.length > 0) {
         if (fullnameInput.value.trim() === "") {
             fullnameInput.focus();
-        } else if (emailImput.value.trim() == "") {
-            emailImput.focus();
-        }else if (phoneImput.value.trim() === "") {
-            phoneImput.focus();
+        } else if (emailInput.value.trim() == "") {
+            emailInput.focus();
+        }else if (phoneInput.value.trim() === "") {
+            phoneInput.focus();
         }
     }
 
