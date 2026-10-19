@@ -101,11 +101,11 @@ function createStudentCard() {
     };
 
     history.unshift(studentCard);
+    // Spara och uppdatera historiken
     saveHistory();
     console.log(history);
     renderHistory();
-
-    // Spara och uppdatera historiken
+ 
 }
 
 
@@ -162,7 +162,6 @@ function renderHistory() {
 
         historySection.appendChild(article);
 
-        
     }
 }
 
@@ -200,7 +199,6 @@ function deleteHistory() {
     history = [];
     renderHistory();
 
-    // Uppdatera history och visningen på sidan
 }
 
 
@@ -217,7 +215,7 @@ form.addEventListener("submit", function (event) {
 
 // När användaren klickar på "Rensa"
 clearButton.addEventListener("click", function () {
-    console.log("Rensa klickandes");
+    console.log("Rensa klickades");
     clearForm();
 });
 
