@@ -51,6 +51,17 @@ function validateForm() {
     // Visa eventuella felmeddelanden
     displayErrors();
 
+    // Sätt markören i det första tomma fältet
+    if (errors.length > 0) {
+        if (fullnameInput.value.trim() === "") {
+            fullnameInput.focus();
+        } else if (emailImput.value.trim() == "") {
+            emailImput.focus();
+        }else if (phoneImput.value.trim() === "") {
+            phoneImput.focus();
+        }
+    }
+
     // Returnera resultatet (true eller false) av valideringen
     return errors.length === 0;
 }
