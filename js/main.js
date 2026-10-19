@@ -152,6 +152,13 @@ function renderHistory() {
     // Rensa tidigare visad historik
     historySection.innerHTML = "";
 
+    // Visa ett meddelande om historiken är tom
+    if (history.length === 0) {
+        const message = document.createElement("p");
+        message.textContent = "Inga studentkort har skapats ännu.";
+        historySection.appendChild(message);
+    }
+
     // Skriv ut innehållet i history till DOM
     for (const studentCard of history) {
         const article = document.createElement("article");
