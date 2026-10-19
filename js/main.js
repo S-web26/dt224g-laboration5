@@ -146,13 +146,13 @@ function renderHistory() {
         const article = document.createElement("article");
 
         const name = document.createElement("p");
-        name.textContent = studentCard.fullname;
+        name.textContent = "Namn: " + studentCard.fullname;
 
         const email = document.createElement("p");
-        email.textContent = studentCard.email;
+        email.textContent = "E-post: " + studentCard.email;
 
         const phone = document.createElement("p");
-        phone.textContent = studentCard.phone;
+        phone.textContent = "Telefon: " + studentCard.phone;
 
         article.style.fontFamily = studentCard.font;
 
